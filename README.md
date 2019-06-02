@@ -1,2 +1,2 @@
 # simple_things
-implemented daily things using python
+implemented simple things using python
