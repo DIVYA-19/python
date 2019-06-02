@@ -1,4 +1,4 @@
-#longest subsequence word by word
+#longest subsequence letter by letter
 s1 = "I am waiting"
 s2 ="I have been waiting"
 
