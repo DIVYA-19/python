@@ -1,3 +1,4 @@
+#longest sub sequence word by word
 import re
 s1 = "I am waiting"
 s2 ="I have been waiting"
