@@ -18,10 +18,10 @@ def floyd_warshall(graph):
     nodes = graph.nodes
     weights = graph.weights
     dt_matrix = [[None] * len(nodes) for _ in range(len(nodes))]
-    for i in dt_matrix:
-        for j in dt_matrix: #
+    for i in nodes:
+        for j in nodes: #
             if (i,j) in weights.keys():
-                matrix[i][j] = weights[(i,j)]
+                dt_matrix[i][j] = weights[(i,j)]
     for i in nodes:
         inter_node = i
         for j in nodes:
@@ -31,6 +31,6 @@ def floyd_warshall(graph):
                 else: 
                     if (j,i) in weights and (i,k) in weights and weights[(j,i)]!=None and  weights[(i,k)]!=None:
                         weight = weights[(j,i)]+weights[(i,k)]
-                        if dt_matrix[i][j] > weight:
+                        if dt_matrix[i][j]== None or dt_matrix[i][j] > weight:
                             dt_matrix[i][j] = weight
     return dt_matrix
