@@ -36,6 +36,8 @@ def download_image(keyword):
 	                src  = str(src)
 	                count+=1
 	                image_name = src.split('/')
+	                #downloading file using urllib request
+	                #it can be even done by using selenium but i choose urllib as it is simple for this process
 	                urllib.request.urlretrieve(src, image_name[-1].split('.')[0] +'.jpg')
 	            else:
 	                raise TypeError
